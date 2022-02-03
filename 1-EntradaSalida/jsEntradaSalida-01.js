@@ -5,7 +5,6 @@ function mostrar()
 	
 {
 	/*	
-	
 		"hola mundo" ---> Texto
 		1 ---> Number
 		true ---> Boolean
