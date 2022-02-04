@@ -28,8 +28,6 @@ function mostrarAumento()
 	//Es la version 9 bis, el 9 es similar al 10
 
 	//Revisar que aumento y descuento no se usa *0,1 por ejemplo, sino sumas y restas como se hizo en este.
-
-	//Modificacion PC Laburo
 	
 	//document.getElementById("txtIdResultado").value = "Su sueldo es " + sueldo * (1 + (aumento/100));
 	//Con esto se puede escribir en el cuadro de resultado
