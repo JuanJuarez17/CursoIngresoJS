@@ -22,3 +22,5 @@ function mostrar()
 
     alert("Ustedes se llaman " + nombreEl + " y " + nombreElla + ". Pesan " + pesoEl + " y " + pesoElla + " kilos respectivamente, y el promedio de peso es " + promPeso + ".")
 }
+
+/* Esta mal, el enunciado dice "a una pareja se le piden los datos..." hay que usar prompt.*/

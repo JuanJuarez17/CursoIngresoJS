@@ -14,12 +14,72 @@ function mostrar()
 		ya sea un texto, number o boolean.
 		En el alert va lo que queres mostrar
 	*/
+		
+	/*
+		var mensaje;
+		mensaje = "Esto funciona de maravilla"
+		alert(mensaje);
+	*/
 
-	var mensaje;
+	// Ejercicio 1 Sabado 05022022.
 
-	mensaje = "Esto funciona de maravilla"
+	// Declaracion de variables.
+	var nombreProducto1;
+	var nombreProducto2;
+	var nombreProducto3;
 
-	alert(mensaje);
+	var precioProducto1;
+	var precioProducto2;
+	var precioProducto3;
+	
+	var precioBruto;
+	var precioProm;
+	var precioFinalIva;
+	var descuento;
+	var precioDescuento;
 
+	// Asignacion de variables mediante entrada.
+	nombreProducto1 = prompt("Ingrese el producto N°1:");
+	
+	precioProducto1 = prompt("Ingrese el precio del producto N°1:");
+	precioProducto1 = parseFloat(precioProducto1);
+	
+	nombreProducto2 = prompt("Ingrese el producto N°2:");
+	
+	precioProducto2 = prompt("Ingrese el precio del producto N°2:");
+	precioProducto2 = parseFloat(precioProducto2);
+	
+	nombreProducto3 = prompt("Ingrese el producto N°3:");
+	
+	precioProducto3 = prompt("Ingrese el precio del producto N°3:");
+	precioProducto3 = parseFloat(precioProducto3);
+
+	descuento = prompt("Ingrese el porcentaje de descuento deseado: ");
+	descuento = parseFloat(descuento).toFixed(2);
+
+	// Asignacion de variables mediante calculo.
+	
+	precioBruto = precioProducto1 + precioProducto2 + precioProducto3;
+	
+	precioProm = ((precioProducto1 + precioProducto2 + precioProducto3)/3);
+	
+	precioFinalIva = (precioProducto1 + precioProducto2 + precioProducto3) * 1.21;
+
+	precioDescuento = (precioFinalIva * (1 - (descuento/100))).toFixed(2);
+
+	// Salida de datos.
+
+	alert("El precio en bruto es: " + precioBruto + 
+	". El precio promedio es: " + precioProm + 
+	". El precio final con IVA es: " + precioFinalIva + 
+	". El precio final, teniendo en cuenta el descuento, resulta: " + precioDescuento);
+
+	//alert("El precio en bruto es: " + precioBruto);
+	//alert("El precio promedio es: " + precioProm);
+	//alert("El precio final con IVA es: " + precioFinalIva);
+	//alert("Ingrese el porcentaje de descuento deseado:");
+
+	// Declarar todas las variables al comiendo, no declarar a medida que las necesito.
+	// Se deben parsear todos los datos que ingresen al programa, por prompt o por ID.
 }
 
