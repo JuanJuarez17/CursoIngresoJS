@@ -14,6 +14,4 @@ function mostrar()
     perimetro = ladoDelTriangulo*3;
 
     alert("El perimetro de su triangulo equilatero es " + perimetro + " centimetros.");
-
-
 }

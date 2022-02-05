@@ -1,6 +1,9 @@
 function mostrar()
 {
-	//tomo la edad  
-	alert("ok");
+	if(condicion) // Verdadera, se ejecuta lo que esta en las llaves siguientes
+	{
 
-}//FIN DE LA FUNCIÓN
+	}
+
+
+}
