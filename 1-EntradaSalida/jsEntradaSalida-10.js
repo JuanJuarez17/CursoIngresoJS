@@ -12,7 +12,7 @@ function mostrarAumento()
 
 	var resultado;
 	
-	resultado = importe*0.75;
+	resultado = importe*0.75; // No hacer este tipo de calculo, usar sumas y restas
 
 	//txtIdResultado.value = resultado;
 
