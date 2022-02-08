@@ -4,6 +4,8 @@ se debe mostrar un mensaje como el siguiente "Esto funciona de maravilla"*/
 function mostrar()
 	
 {
+	// Ejercicio original.
+
 	/*	
 		"hola mundo" ---> Texto
 		1 ---> Number
@@ -14,14 +16,14 @@ function mostrar()
 		ya sea un texto, number o boolean.
 		En el alert va lo que queres mostrar
 	*/
-		
+	
 	/*
 		var mensaje;
 		mensaje = "Esto funciona de maravilla"
 		alert(mensaje);
 	*/
-
-	// Ejercicio 1 Sabado 05022022.
+	
+	/*// Ejercicio 1 Sabado 05022022.
 
 	// Declaracion de variables.
 	var nombreProducto1;
@@ -74,12 +76,30 @@ function mostrar()
 	". El precio final con IVA es: " + precioFinalIva + 
 	". El precio final, teniendo en cuenta el descuento, resulta: " + precioDescuento);
 
-	//alert("El precio en bruto es: " + precioBruto);
-	//alert("El precio promedio es: " + precioProm);
-	//alert("El precio final con IVA es: " + precioFinalIva);
-	//alert("Ingrese el porcentaje de descuento deseado:");
-
 	// Declarar todas las variables al comiendo, no declarar a medida que las necesito.
-	// Se deben parsear todos los datos que ingresen al programa, por prompt o por ID.
+	// Se deben parsear todos los datos que ingresen al programa, por prompt o por ID.*/
+
+	// Ejercicio Jugueteria Sabado 05022022.
+
+	// Declaracion de variables.
+	var diagonalAB;
+	var diagonalCD;
+	var ladoCorto;
+	var ladoLargo;
+	var perimetro;
+	var curvasInteriores;
+
+	ladoCorto = prompt("Ingrese la medida del lado corto del cometa en centrimetros:");
+	ladoCorto = parseFloat(ladoCorto);
+
+	ladoLargo = prompt("Ingrese la medida del lado largo del cometa en centrimetros:");
+	ladoLargo = parseFloat(ladoLargo);
+
+	perimetro = ladoCorto * 2 + ladoLargo * 2;
+
+	//alert("El perimetro del cometa es: " + perimetro);
+
+
+
 }
 
