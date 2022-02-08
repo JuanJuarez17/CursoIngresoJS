@@ -97,7 +97,7 @@ function mostrar()
 
 	perimetro = ladoCorto * 2 + ladoLargo * 2;
 
-	//alert("El perimetro del cometa es: " + perimetro);
+	alert("El perimetro del cometa es: " + (perimetro/100) + " metros.");
 
 
 
