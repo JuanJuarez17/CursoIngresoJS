@@ -4,9 +4,10 @@ se debe mostrar un mensaje como el siguiente "Esto funciona de maravilla"*/
 function mostrar()
 	
 {
-	// Ejercicio original.
+	/*
 
-	/*	
+	// Ejercicio original.
+	
 		"hola mundo" ---> Texto
 		1 ---> Number
 		true ---> Boolean
@@ -15,15 +16,15 @@ function mostrar()
 		sale un cartel con lo que se menciona en el comando alert,
 		ya sea un texto, number o boolean.
 		En el alert va lo que queres mostrar
-	*/
-	
-	/*
+		
 		var mensaje;
 		mensaje = "Esto funciona de maravilla"
 		alert(mensaje);
 	*/
+
+	/*
 	
-	/*// Ejercicio 1 Sabado 05022022.
+	// Ejercicio 1 Sabado 05022022.
 
 	// Declaracion de variables.
 	var nombreProducto1;
@@ -79,15 +80,19 @@ function mostrar()
 	// Declarar todas las variables al comiendo, no declarar a medida que las necesito.
 	// Se deben parsear todos los datos que ingresen al programa, por prompt o por ID.*/
 
-	// Ejercicio Jugueteria Sabado 05022022.
+	// Ejercicio Rompecocos Sabado 05022022.
 
 	// Declaracion de variables.
-	var diagonalAB;
-	var diagonalCD;
+
 	var ladoCorto;
 	var ladoLargo;
+	var diagonalAB;
+	var diagonalCD;
 	var perimetro;
-	var curvasInteriores;
+	var cantidadDeAlambre;
+	var superficie;
+	var cola;
+	var cantidadDePapel;
 
 	ladoCorto = prompt("Ingrese la medida del lado corto del cometa en centrimetros:");
 	ladoCorto = parseFloat(ladoCorto);
@@ -95,11 +100,24 @@ function mostrar()
 	ladoLargo = prompt("Ingrese la medida del lado largo del cometa en centrimetros:");
 	ladoLargo = parseFloat(ladoLargo);
 
+	diagonalAB = prompt("Ingrese la medida de la diagonal mayor del cometa en centrimetros:");
+	diagonalAB = parseFloat(diagonalAB);
+
+	diagonalCD = prompt("Ingrese la medida de la diagonal menor del cometa en centrimetros:");
+	diagonalCD = parseFloat(diagonalCD);
+
 	perimetro = ladoCorto * 2 + ladoLargo * 2;
 
-	alert("El perimetro del cometa es: " + (perimetro/100) + " metros.");
+	cantidadDeAlambre = perimetro + diagonalAB + diagonalCD;
 
+	alert("La cantidad de alambre que usted necesita para fabricar 10 cometas es: " + ((cantidadDeAlambre/100)*10) + " metros.");
 
+	superficie = (diagonalAB * diagonalCD) / 2;
 
+	cola = superficie * 0.10;
+
+	cantidadDePapel = superficie + cola;
+
+	alert("La cantidad de papel que usted necesita para fabricar 10 cometas es: " + ((cantidadDePapel/10000)*10) + " metros cuadrados.");
 }
 
