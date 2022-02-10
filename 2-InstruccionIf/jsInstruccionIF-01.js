@@ -11,6 +11,7 @@ function mostrar()
 
 	{
 		alert("Niña bonita");
+		//console.log("Condicion verdadera"); Ver en la consola
 	}
 
 	if(edadIngresada!=15) // Verdadera, se ejecuta lo que esta en las llaves siguientes

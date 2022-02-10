@@ -1,6 +1,27 @@
 function mostrar()
 {
-	//Genero el número RANDOM entre 1 y 10 
-	alert("ok");
+	var notaExamen;
 
-}//FIN DE LA FUNCIÓN
+	notaExamen = Math.random()*(10-1)+1
+	notaExamen = Math.round(notaExamen);
+
+	console.log(notaExamen);
+	
+	if(notaExamen>=9)
+
+	{
+		alert("Excelente.");
+	}
+
+	if(notaExamen>=4 && notaExamen<=9)
+
+	{
+		alert("Aprobo.");
+	}
+
+	else
+
+	{
+		alert("Vamos, la proxima se puede.");
+	}
+}
