@@ -8,16 +8,19 @@ function mostrar()
 
 	estadoCivil = document.getElementById("estadoCivil").value;
 
-	/*if(!(edadIngresada<18 && estadoCivil!="Soltero"))
+	// Condicion indirecta.
+
+	if(!(edadIngresada<18 || estadoCivil!="Soltero"))
 
 	{
 		alert("Es soltero y no es menor.");
 	}
-	*/
-	
-	if(edadIngresada>=18 && estadoCivil=="Soltero")
+		
+	// Condicion directa.
+
+	/*if(edadIngresada>=18 && estadoCivil=="Soltero")
 
 	{
 		alert("Es soltero y no es menor.");
-	}
+	}*/
 }

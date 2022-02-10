@@ -17,7 +17,9 @@ function mostrar()
 		alert("Usted no es adolescente.");
 	}
 
-	/*En vez de usar && usar or
+	/*Tambien se puede usar el operador logico or
+	Recordar que mientas mas if ponga en el codigo, mas veces se detendra el programa a verificar la condicion (lo hace mas lento).
+	En else el programa NO para a verificar ninguna condicion
 
 	if(edadIngresada<13 || edadIngresada>17)
 

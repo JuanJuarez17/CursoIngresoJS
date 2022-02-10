@@ -1,18 +1,22 @@
 function mostrar()
 {
 	var numeroRandom;
+	var maximo;
+	var minimo;
 
-	/*numeroRandom = Math.random()*(10-1)+1;
+	maximo = 10;
+	minimo = 1;
+
+	numeroRandom = Math.round(Math.random()*(maximo-minimo)+minimo);
+
+	/*numeroRandom = Math.random()*(maximo-minimo)+minimo;
 	numeroRandom = Math.round(numeroRandom);
-	//numeroRandom = Math.random()*(maximo-minimo)+minimo;
+	
+	// Math.floor() Redondea para abajo
+	// Math.ceil() Redondea para arriba
+	// Math.round() Redondea al entero mas cercano
 	*/
 	
-	//Tambien se puede escribir
-
-	numeroRandom = Math.round(Math.random()*(10-1))+1;
-
 	alert(numeroRandom);
-
-	console.log(numeroRandom);
 
 }

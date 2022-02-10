@@ -119,5 +119,7 @@ function mostrar()
 	cantidadDePapel = superficie + cola;
 
 	alert("La cantidad de papel que usted necesita para fabricar 10 cometas es: " + ((cantidadDePapel/10000)*10) + " metros cuadrados.");
+
+	//Para saber cantidad de cada papel de color dividir el area por 2.
 }
 

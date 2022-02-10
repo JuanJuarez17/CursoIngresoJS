@@ -13,15 +13,22 @@ function mostrar()
 		alert("Excelente.");
 	}
 
-	if(notaExamen>=4 && notaExamen<=9)
-
-	{
-		alert("Aprobo.");
-	}
-
 	else
 
 	{
-		alert("Vamos, la proxima se puede.");
+		if(notaExamen>=4 && notaExamen<=9)
+
+		{
+			alert("Aprobo.");
+		}
+	
+		else
+	
+		{
+			alert("Vamos, la proxima se puede.");
+		}
 	}
+
+
+
 }
