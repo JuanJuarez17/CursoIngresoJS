@@ -21,7 +21,7 @@ function CalcularPrecio ()
     cantidadLamparas = parseInt(cantidadLamparas);
     marca = document.getElementById("Marca").value;
  
-    if (cantidadLamparas >= 6)
+    /*if (cantidadLamparas >= 6)
     {
         descuento = 0.5;
     }
@@ -77,8 +77,110 @@ function CalcularPrecio ()
                 }
             }
         }
-    }  
+    }*/
 
+    // Resolucion de ejercicio por marcas, es mucho mas largo.
+    
+    if (marca == "ArgentinaLuz")
+    {
+        if (cantidadLamparas >= 6)
+        {
+            descuento =0.5;
+        }
+        else
+        {
+            if (cantidadLamparas == 5)
+            {
+                descuento = 0.4;
+            }
+            else
+            {
+                if (cantidadLamparas == 4)
+                {
+                    descuento = 0.25;
+                }
+                else
+                {
+                    if (cantidadLamparas == 3)
+                    {
+                        descuento = 0.15;
+                    }
+                    else
+                    {
+                        descuento = 0;
+                    }
+                }
+            }
+        }
+    }
+    else
+    {
+        if (marca == "FelipeLamparas")
+        {
+            if (cantidadLamparas >= 6)
+            {
+                descuento = 0.5;
+            }
+            else
+            {
+                if (cantidadLamparas == 5)
+                {
+                    descuento = 0.3;
+                }
+                else
+                {
+                    if (cantidadLamparas == 4)
+                    {
+                        descuento = 0.25;
+                    }
+                    else
+                    {
+                        if (cantidadLamparas == 3)
+                        {
+                            descuento = 0.1;
+                        }
+                        else
+                        {
+                            descuento = 0;
+                        }
+                    }
+                }
+            }
+        }
+        else
+        {
+            if (cantidadLamparas >= 6)
+            {
+                descuento = 0.5;
+            }
+            else
+            {
+                if (cantidadLamparas == 5)
+                {
+                    descuento = 0.3;
+                }
+                else
+                {
+                    if (cantidadLamparas == 4)
+                    {
+                        descuento = 0.2;
+                    }
+                    else
+                    {
+                        if (cantidadLamparas == 3)
+                        {
+                            descuento = 0.05;
+                        }
+                        else
+                        {
+                            descuento = 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+      
     precioSinDescuento = cantidadLamparas * 35;
     precioFinal = precioSinDescuento - (precioSinDescuento * descuento);
 
@@ -89,4 +191,6 @@ function CalcularPrecio ()
         alert("IIBB: Usted pago: $" + ib + ".");
     }
     document.getElementById("txtIdprecioDescuento").value = precioFinal;
+    
+    //document.getElementById("txtIdprecioDescuento").value = descuento; ---> Para debuggear
 }
