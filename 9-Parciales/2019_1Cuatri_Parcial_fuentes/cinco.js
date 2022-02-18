@@ -63,6 +63,4 @@ function mostrar() {
     costoNeto = costoBruto + (costoBruto * descuentoDestino) + (costoBruto * descuentoPago);
 
     alert("El costo final de su viaje es: $" + costoNeto);
-
-
 }

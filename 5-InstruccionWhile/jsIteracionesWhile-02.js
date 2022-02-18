@@ -4,7 +4,14 @@ con números DESCENDENTES, desde el 10 al 1.*/
 function mostrar()
 {
 	var contador;
-	contador=0; 
-	alert('iteración while');
+	contador=10; 
+	
+	while(contador>1)
+	{
+		console.log(contador);
+		contador=contador-1;
+	}
 
-}//FIN DE LA FUNCIÓN
+	alert("El numero final es: " + contador);
+
+}
