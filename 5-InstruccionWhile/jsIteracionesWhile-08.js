@@ -7,6 +7,8 @@ function mostrar()
 	var respuesta;
 	var sumaPositivos;
 	var multiplicacionNegativos;
+	var numeroIngresado;
+
 	contador=0;
 	sumaPositivos=0;
 	multiplicacionNegativos=1;
@@ -14,10 +16,20 @@ function mostrar()
 
 	while(respuesta=="si")
 	{
+		contador=contador+1;
 		numeroIngresado=prompt("Ingrese un numero: ");
 		numeroIngresado=parseInt(numeroIngresado);
-		contador=contador+1;
-		respuesta=prompt("Quiere ingresar otro numero?");
+
+		if(numeroIngresado>0)
+		{
+			sumaPositivos=sumaPositivos+numeroIngresado;
+		}
+		else
+		{
+			multiplicacionNegativos=multiplicacionNegativos*numeroIngresado;
+		}
+
+		respuesta=prompt("Desea ingresar otro numero?")
 	}
 
 	document.getElementById("txtIdSuma").value=sumaPositivos;
