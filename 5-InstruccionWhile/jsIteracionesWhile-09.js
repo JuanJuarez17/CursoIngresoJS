@@ -8,7 +8,7 @@ function mostrar() {
 	var numeroMinimo;
 	var respuesta;
 
-	banderaDelPrimero = "es el primero";
+	banderaDelPrimero = "es el primero"; // banderaDelPrimero = true; banderaDelPrimero = 1; 
 	respuesta = 'si';
 	while (respuesta == "si") {
 

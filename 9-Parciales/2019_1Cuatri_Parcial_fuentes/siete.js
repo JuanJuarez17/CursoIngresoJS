@@ -8,12 +8,12 @@ function mostrar() {
     var contador;
     var alturaAcumulador;
     var banderaDelPrimero;
-    var contadorMujeresBajas;
+    var contadorMujeresAltas;
 
     contador = 0;
     alturaAcumulador = 0;
     banderaDelPrimero = "Es el primero";
-    contadorMujeresBajas = 0;
+    contadorMujeresAltas = 0;
 
     while (contador < 5) {
 
@@ -39,26 +39,24 @@ function mostrar() {
             if (alturaIngresada < alturaMinima) {
                 alturaMinima = alturaIngresada;
             }
-            else {
+            /*else {
                 if (alturaIngresada > alturaMaxima) {
                     alturaMaxima = alturaIngresada;
                 }
-            }
+            }*/
         }
 
         sexoIngresado = prompt("Ingrese el sexo del jugador Nº" + contador);
-
-        if (alturaIngresada <= alturaMinima) {
-            sexoMenorEstatura = sexoIngresado;
-        }
 
         while (sexoIngresado != "f" && sexoIngresado != "m") {
             alert("El sexo ingresado es incorrecto.");
             sexoIngresado = prompt("Ingrese el sexo del jugador Nº" + contador);
         }
-
-        if (sexoIngresado == "f" && alturaIngresada < 190) {
-            contadorMujeresBajas = contadorMujeresBajas + 1;
+        if (alturaIngresada <= alturaMinima) {
+            sexoMenorEstatura = sexoIngresado;
+        }
+        if (sexoIngresado == "f" && alturaIngresada > 190) {
+            contadorMujeresAltas = contadorMujeresAltas + 1;
         }
     }
 
@@ -66,5 +64,5 @@ function mostrar() {
 
     alert("La altura promedio de los jugadores es: " + alturaPromedio + " centimetros.");
     alert("La altura minima es: " + alturaMinima + " centimetros, y el sexo de ese jugador es " + sexoMenorEstatura + ".");
-    alert("La cantidad de mujeres que poseen una estatura menor a 190 centimetros es: " + contadorMujeresBajas + ".");
+    alert("La cantidad de mujeres que poseen una estatura mayor a 190 centimetros es: " + contadorMujeresAltas + ".");
 }
