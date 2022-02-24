@@ -72,15 +72,15 @@ function mostrar() {
 
 	diferencia = sumaPositivos - sumaNegativos;
 
-	document.write("La suma de negativos es : " + sumaNegativos + ".");
-	document.write("<br>La suma de positivos es : " + sumaPositivos + ".");
-	document.write("<br>La cantidad de positivos es : " + contadorPositivos + ".");
-	document.write("<br>La cantidad de negativos es : " + contadorNegativos + ".");
-	document.write("<br>La cantidad de ceros es : " + contadorCeros + ".");
-	document.write("<br>La cantidad de numeros pares es : " + contadorPares + ".");
-	document.write("<br>El promedio de numeros positivos es : " + promedioPositivos + ".");
-	document.write("<br>El promedio de numeros negativos es : " + promedioNegativos + ".");
-	document.write("<br>La diferencia entre numeros positivos y negativos es : " + diferencia + ".");
+	document.write("La suma de negativos es : " + sumaNegativos + "." +
+	"<br>La suma de positivos es : " + sumaPositivos + "." +
+	"<br>La cantidad de positivos es : " + contadorPositivos + "." +
+	"<br>La cantidad de negativos es : " + contadorNegativos + "." +
+	"<br>La cantidad de ceros es : " + contadorCeros + "." +
+	"<br>La cantidad de numeros pares es : " + contadorPares + "." +
+	"<br>El promedio de numeros positivos es : " + promedioPositivos + "." +
+	"<br>El promedio de numeros negativos es : " + promedioNegativos + "." +
+	"<br>La diferencia entre numeros positivos y negativos es : " + diferencia + ".");
 }//FIN DE LA FUNCIÓN
 
 /*Si no ingreso un numero positivo, el promedio de los mismos me va a dar un NaN, 

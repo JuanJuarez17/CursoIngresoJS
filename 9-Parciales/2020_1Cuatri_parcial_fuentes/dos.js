@@ -218,7 +218,8 @@ function mostrar() {
   "\nVendedora Maria. Importe total: " + acumuladorMaria + ". Cantidad de ventas: " + contadorMaria + ". Importe con comisiones: " + importeFinalMaria + "." +
   "\nEl vendedor de mayor ventas es: " + vendedorMaximo + " con un total de: " + acumuladorMaximo + ".");*/
 
-  var nombreApellido;
+  var nombre;
+  var apellido;
   var genero;
   var cantHijos;
   var contador;
@@ -229,18 +230,35 @@ function mostrar() {
   var porcentajeFemenino;
   var porcentajeMasculino;
   var porcentajeNoBinario;
+  var flagHijosNoBinario;
+  var cantHijosNoBinarioMaximo;
+  var nombreNoBimarioMasHijos;
+  var flagPrimeroSinHijos;
+  var nombrePrimerEmpleadoSinHijos;
+  var apellidoPrimerEmpleadoSinHijos;
+  var asignacionUnHijo;
+  var asignacionDosHijos;
+  var asignacionMasHijos;
+  var asignacionTotal;
 
   contador = 0;
   contadorGenero = 0;
   contadorFemenino = 0;
   contadorMasculino = 0;
   contadorNoBinario = 0;
+  flagHijosNoBinario = true;
+  flagPrimeroSinHijos = true;
+  asignacionUnHijo = 0;
+  asignacionDosHijos = 0;
+  asignacionMasHijos = 0;
 
   while (contador < 5) { //Poner 10
 
     contador = contador + 1;
 
-    nombreApellido = prompt("Ingrese nombre y apellido del empleado Nº " + contador + ".");
+    nombre = prompt("Ingrese el nombre del empleado Nº " + contador + ".");
+
+    apellido = prompt("Ingrese el apellido del empleado Nº " + contador + ".");
 
     genero = prompt("Ingrese el genero del empleado Nº " + contador + ".");
     while (genero != "femenino" && genero != "masculino" && genero != "no binario") {
@@ -253,6 +271,11 @@ function mostrar() {
     while (isNaN(cantHijos) || cantHijos < 0) {
       cantHijos = prompt("Error! Ingrese la cantidad de hijos del empleado Nº " + contador + ".");
     }
+    if (flagPrimeroSinHijos == true && cantHijos==0){
+      nombrePrimerEmpleadoSinHijos = nombre;
+      apellidoPrimerEmpleadoSinHijos = apellido;
+      flagPrimeroSinHijos = false;
+    }
     switch (genero) {
       case "femenino":
         contadorFemenino = contadorFemenino + 1;
@@ -262,6 +285,24 @@ function mostrar() {
         break;
       case "no binario":
         contadorNoBinario = contadorNoBinario + 1;
+        if (flagHijosNoBinario == true || cantHijos > cantHijosNoBinarioMaximo) {
+          cantHijosNoBinarioMaximo = cantHijos;
+          nombreNoBimarioMasHijos = nombre;
+          flagHijosNoBinario = false;
+        }
+        break;
+    }
+    switch (cantHijos) {
+      case "0":
+        break;
+      case "1":
+        asignacionUnHijo = asignacionUnHijo + 5000;
+        break;
+      case "2":
+        asignacionDosHijos = asignacionDosHijos + 8000; 
+        break;
+      default:
+        asignacionMasHijos = asignacionMasHijos + 10000;
         break;
     }
   } // Fin del while
@@ -270,15 +311,12 @@ function mostrar() {
   porcentajeMasculino = (contadorMasculino / contadorGenero) * 100;
   porcentajeNoBinario = (contadorNoBinario / contadorGenero) * 100;
 
-  console.log(porcentajeFemenino);
-  console.log(porcentajeMasculino);
-  console.log(porcentajeNoBinario);
+  asignacionTotal = asignacionUnHijo + asignacionDosHijos + asignacionMasHijos;
 
-
-
-
-
-
-
-
+  document.write("El porcentaje de empleados de genero femenimo es: " + porcentajeFemenino + "%." +
+    "<br>El porcentaje de empleados de genero masculino es: " + porcentajeMasculino + "%." +
+    "<br>El porcentaje de empleados de genero no binario es: " + porcentajeNoBinario + "%." +
+    "<br>El nombre del empleado no binario con mayor cantidad de hijos es: " + nombreNoBimarioMasHijos + "." + 
+    "<br>El nombre y apellido del primer empleado sin hijos es: " + nombrePrimerEmpleadoSinHijos + " " + apellidoPrimerEmpleadoSinHijos + "." +
+    "<br>La empresa debera pagar un total de: $" + asignacionTotal + " en asignaciones.");
 }
