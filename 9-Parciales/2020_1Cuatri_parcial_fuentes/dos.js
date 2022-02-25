@@ -252,7 +252,7 @@ function mostrar() {
   asignacionDosHijos = 0;
   asignacionMasHijos = 0;
 
-  while (contador < 5) { //Poner 10
+  while (contador < 10) {
 
     contador = contador + 1;
 
